@@ -1,0 +1,21 @@
+body {
+    font-family: "Mona Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    overflow-x: clip;
+    overflow: scroll;
+}
+.counter {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 450px; /* Para que el contador se active al hacer scroll */
+}
+
+.type{
+  background:#ccc;
+  padding:10px;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+}
