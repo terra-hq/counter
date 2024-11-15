@@ -50,7 +50,8 @@ class Counter {
             easing = "power1.out",
             autoPlay = false,
             playOnce = false,
-            onComplete = null
+            onComplete = null,
+            decimalPlaces = 0
         } = payload;
 
         // Validate that `element` is a single HTML element
@@ -69,6 +70,7 @@ class Counter {
         this.autoPlay = autoPlay;
         this.playOnce = playOnce;
         this.onComplete = onComplete;
+        this.decimalPlaces = decimalPlaces;
         this.counterStarted = false;
         this.scrollTrigger = null;
         this.animation = null;
@@ -117,7 +119,6 @@ class Counter {
                 }
                 this.counterStarted = false;
 
-                // Call the onComplete callback if provided
                 if (typeof this.onComplete === "function") {
                     this.onComplete();
                 }
@@ -125,8 +126,8 @@ class Counter {
         });
     }
 
-    formatNumber(value) {
-        const parts = value.toFixed(0).split(".");
+     formatNumber(value) {
+        const parts = value.toFixed(this.decimalPlaces).split("."); // Usar decimales configurados
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, this.separator);
         return parts.join(".");
     }

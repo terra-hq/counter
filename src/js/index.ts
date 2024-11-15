@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   */
   const counter1 = new Counter({
       element: document.querySelector(".counter-element-1"),
-      endValue: 20,
+      endValue: 2000,
       duration: 12,
-      separator: ",",
+      separator: "",
       start: "top center",
       debug: true,
       easing: "power1.out",
@@ -88,6 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".js--fireAnimation")?.addEventListener("click", (e) => {
     e.preventDefault();
     counter6.play();
+  });
+
+  const counter7 = new Counter({
+    element: document.querySelector(".counter-element-7"),
+    endValue: 41.9,
+    duration: 4,
+    separator: ".",
+    start: "top 75%",
+    debug: true,
+    easing:  "elastic.out(1,0.3)",
+    autoPlay: true,
+    playOnce: true, // Activar solo una vez
+    decimalPlaces : 1
   });
 
 
