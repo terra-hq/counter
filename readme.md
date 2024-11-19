@@ -9,7 +9,6 @@ import Counter from "@terrahq/counter";
 
 const counter = new Counter({
     element: document.querySelector(".counter-element"),
-    endValue: 5000, // The final value of the counter
     duration: 2, // Duration of the animation in seconds
     separator: ".", // Thousands separator (optional)
     start: "top center", // ScrollTrigger start position (optional)
@@ -30,7 +29,6 @@ counter.destroy(); // Clean up the instance and stop animations
 ### Constructor Parameters
 
 -   element (HTMLElement, required): The HTML element that will display the animated number.
--   endValue (Number, optional): The end value for the counter animation. Default is 1000.
 -   duration (Number, optional): Duration of the animation in seconds. Default is 2.
 -   separator (String, optional): Thousands separator in the number animation. Default is ",".
 -   start (String, optional): ScrollTrigger start position. Default is "top top".
@@ -64,7 +62,6 @@ counter.destroy(); // Clean up the instance and stop animations
 ```js
 const counter = new Counter({
     element: document.querySelector(".counter-element"),
-    endValue: 5000, // The final value of the counter
     duration: 2, // Duration of the animation in seconds
     separator: ".", // Thousands separator (optional)
     start: "top center", // ScrollTrigger start position (optional)

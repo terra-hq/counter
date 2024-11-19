@@ -1,14 +1,12 @@
 import "./../scss/style.scss";
-
-import gsap from "gsap";
 import Counter from "./Counter";
+
 document.addEventListener("DOMContentLoaded", () => {
     /**
      * Counter 1
      */
     const counter1 = new Counter({
         element: document.querySelector(".counter-element-1"),
-        endValue: 2000,
         duration: 12,
         separator: "",
         start: "top center",
@@ -20,23 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /**
-     * Counter 1
+     * Counter 2
      */
     const counter2 = new Counter({
         element: document.querySelector(".counter-element-2"),
-        endValue: 6000,
         duration: 4,
-        separator: ".",
+        separator: ",",
         start: "top center",
         debug: true,
         easing: "power1.out",
         autoPlay: true,
         playOnce: true, // Activar solo una vez
+        decimalPlaces: 1,
     });
 
+    /**
+     * Counter 3
+     */
     const counter3 = new Counter({
         element: document.querySelector(".counter-element-3"),
-        endValue: 1230,
         duration: 4,
         separator: ",",
         start: "top center",
@@ -46,9 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
         playOnce: true, // Activar solo una vez
     });
 
+    /**
+     * Counter 4
+     */
     const counter4 = new Counter({
         element: document.querySelector(".counter-element-4"),
-        endValue: 1230,
         duration: 4,
         separator: ",",
         start: "top 35%",
@@ -58,11 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
         playOnce: false, // Activar solo una vez
     });
 
+    /**
+     * Counter 5
+     */
     const counter5 = new Counter({
         element: document.querySelector(".counter-element-5"),
-        endValue: 1230,
         duration: 4,
-        separator: ",",
+        separator: ".",
         start: "top 75%",
         debug: true,
         easing: "elastic.out(1,0.3)",
@@ -70,9 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
         playOnce: true, // Activar solo una vez
     });
 
+    /**
+     * Counter 6
+     */
     const counter6 = new Counter({
         element: document.querySelector(".counter-element-6"),
-        endValue: 1230,
         duration: 4,
         separator: ",",
         start: "top 75%",
@@ -86,11 +92,13 @@ document.addEventListener("DOMContentLoaded", () => {
         counter6.play();
     });
 
+    /**
+     * Counter 7
+     */
     const counter7 = new Counter({
         element: document.querySelector(".counter-element-7"),
-        endValue: 41.9,
         duration: 4,
-        separator: ".",
+        separator: ",",
         start: "top 75%",
         debug: true,
         easing: "power1.out",
